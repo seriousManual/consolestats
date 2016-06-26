@@ -1,0 +1,37 @@
+{
+  "name": "consolestats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ConsoleStats.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seriousManual/consolestats.git"
+  },
+  "keywords": [
+    "statistics",
+    "console",
+    "aggregation",
+    "events"
+  ],
+  "author": "Manuel Ernst <seriousstuff@gmx.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seriousManual/consolestats/issues"
+  },
+  "homepage": "https://github.com/seriousManual/consolestats#readme",
+  "dependencies": {
+    "humanize": "0.0.9",
+    "moment": "^2.13.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "sinon": "^1.17.4"
+  },
+  "engine": {
+    "node": ">=4.0"
+  }
+}
