@@ -48,10 +48,23 @@ class Stats {
                 return util.format('%s: %s(%s%%)', key, hum.numberFormat(count, 0), hum.numberFormat(count / this._sumSoFar * 100))
             })
 
-        var timeLeft = moment.duration((this._overall - this._sumSoFar) / this._countRate, 'seconds').humanize()
-        var avgTimeEach = 1000 / this._countRate
+        var overallSectionParts = []
+        overallSectionParts.push(util.format('overall: %s', hum.numberFormat(this._sumSoFar, 0)))
 
-        groups.push(util.format('overall: %s(%s%%) of %s, %s#/s, %dms/item (%s left)', hum.numberFormat(this._sumSoFar, 0), hum.numberFormat(this._sumSoFar / this._overall * 100), hum.numberFormat(this._overall, 0), hum.numberFormat(this._countRate), hum.numberFormat(avgTimeEach), timeLeft))
+        if (this._overall) {
+            overallSectionParts.push(util.format('(%s%%) of %s', hum.numberFormat(this._sumSoFar / this._overall * 100), hum.numberFormat(this._overall, 0)))
+        }
+
+        var avgTimeEach = 1000 / this._countRate
+        overallSectionParts.push(util.format(', %s#/s, ', hum.numberFormat(this._countRate)))
+        overallSectionParts.push(util.format('%dms/item ', hum.numberFormat(avgTimeEach)))
+
+        if (this._overall) {
+            var timeLeft = moment.duration((this._overall - this._sumSoFar) / this._countRate, 'seconds').humanize()
+            overallSectionParts.push(util.format('(%s left)', timeLeft))
+        }
+
+        groups.push(overallSectionParts.join(''))
 
         this._sinkMethod(groups.join(', ') + '\r')
     }
