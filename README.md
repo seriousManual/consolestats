@@ -12,7 +12,7 @@ npm install consolestats
 ````javascript
 var ConsoleStats = require('consolestats')
 
-var myStats = new ConsoleStats(1000) //1000 is the overall expected number of events
+var myStats = new ConsoleStats(1000) //1000 is the overall expected number of events (optional)
 
 setInterval(() => myStats.push('foo'), 100)
 setInterval(() => myStats.push('bar'), 200)
