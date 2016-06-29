@@ -1,7 +1,7 @@
 {
   "name": "consolestats",
   "version": "1.0.1",
-  "description": "",
+  "description": "logs and aggregates events in a cli application",
   "main": "ConsoleStats.js",
   "scripts": {
     "test": "mocha test.js"
@@ -14,7 +14,8 @@
     "statistics",
     "console",
     "aggregation",
-    "events"
+    "events",
+    "log"
   ],
   "author": "Manuel Ernst <seriousstuff@gmx.de>",
   "license": "MIT",
