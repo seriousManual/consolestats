@@ -1,6 +1,6 @@
 # CONSOLESTATS [![Build Status](https://travis-ci.org/seriousManual/consolestats.png)](https://travis-ci.org/seriousManual/consolestats)
 
-ConsoleStats is a small library that aggregates certain named events a creates statistic which is printed to the console.
+ConsoleStats is a small library that aggregates certain named events and creates statistic which are printed to the console.
 
 ## Installation
 ````
