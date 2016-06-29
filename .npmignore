@@ -1,0 +1,6 @@
+.idea
+.gitignore
+.travis.yml
+pics
+example.js
+test.js
