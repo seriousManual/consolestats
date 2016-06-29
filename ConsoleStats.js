@@ -10,7 +10,7 @@ var defaultWriteMethod = (text) => process.stdout.write(text)
 class Stats {
     constructor (overallAmount, sinkMethod) {
         this._overall = overallAmount
-        this._sinkMethod = sinkMethod || defaultWriteMethod
+        this._sinkMethod = sinkMethod || defaultWriteMethod //needed for testing
 
         this._aggregate = {}
         this._sumSoFar = 0

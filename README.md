@@ -2,6 +2,10 @@
 
 ConsoleStats is a small library that aggregates certain named events and creates statistic which are printed to the console.
 
+<p align="center">
+  <img src="https://raw.github.com/seriousManual/consolestats/master/pics/example.gif" width="909" />
+</p>
+
 ## Installation
 ````
 npm install consolestats
